@@ -1,6 +1,12 @@
 ---
 dist: xenial
 install:
-  - curl -s https://raw.githubusercontent.com/wata727/tflint/master/install_linux.sh | bash - || ls /tmp
+  - wget https://github.com/wata727/tflint/releases/download/v0.8.3/tflint_linux_amd64.zip -O /tmp/tflint.zip
+  - sudo unzip -d /usr/local/bin/ /tmp/tflint.zip
+  - rm /tmp/tflint.zip
 script:
   - tflint ./
+notifications:
+  email: false
+  slack:
+    secure: qn5XP2+AGOPWvMcfcECIfN041coAo7pO8z27vasCc3ewtT9gg1nJLUdUP4qNJ9Tj1RIgGjr0MHrqpeDXeJ2Mx8qUytTsn6XC4fZmnxfEw0E80xVQob+SzgC49vHwRvWzM8Um4wyPjkIdjmbD9PxcipuKx3nXnFVRMbBgDpXEyyuhaDEJHP0NHW+Bkyv4BagFrKD7E2FkPylJsWOUIJ5PBhymMeqwzJZT+yNKmAZpMrFxLu4DzR1ytrB3UVnudlUcukZg3w0gi7BuGGuEVitVb4xHhJq7jV6DPZNpP97zfpZ992PcJke885nn8Yg3onkqAMIcRMO7C7mGv+5vTc0HXGl5ospnBhIwverqHjYoiN3KhqtQqxdM+ljEAYZvLkhGChduCazRaD9fLifzqdlyfNmY8XFCY3ZbH2qZ8Oy7tRvX2Gke+M9lpCKVem5KiUB7u/cXPZXI15nR6L6EbJ3igL5AvGbUHh07i6BSPC7PaOlOCm9WQFj3GkvKSKo/d6Dl4Vmhk3P58S062voSSMc1+yKZ8oU/jDiUOOvablklEgxAJoUuDwQg7wex5F37JQYtkwKS8Kh7m9MYM1BvKaT7Osuf2oshAeLzAGs/HohHRx9EpxlkDAviJrG+6a0Dup2Um9ldqfo+JpPmhi14n2I7GBZAeqqhKDTYnPlmwDS17+s=
