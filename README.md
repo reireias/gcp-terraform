@@ -7,6 +7,15 @@ create bucket
 gsutil mb gs://reireias-terraform/
 ```
 
+make aws access key file
+
+```bash
+vi secret.auto.tfvars
+# add this settings
+aws_access_key_id="xxxx"
+aws_secret_access_key="xxxx"
+```
+
 init
 
 ```bash
@@ -17,10 +26,4 @@ apply
 
 ```bash
 terraform apply
-```
-
-update environment
-
-```bash
-gcloud functions deploy aws-billing-copy --update-env-vars="AWS_ACCESS_KEY_ID=xxxxx,AWS_SECRET_ACCESS_KEY=xxxxx"
 ```
