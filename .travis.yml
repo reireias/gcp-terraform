@@ -1,0 +1,6 @@
+---
+dist: xenial
+install:
+  - curl -s https://raw.githubusercontent.com/wata727/tflint/master/install_linux.sh | bash -
+script:
+  - tflint ./
