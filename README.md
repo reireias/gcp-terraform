@@ -18,3 +18,9 @@ apply
 ```bash
 terraform apply
 ```
+
+update environment
+
+```bash
+gcloud functions deploy aws-billing-copy --update-env-vars="AWS_ACCESS_KEY_ID=xxxxx,AWS_SECRET_ACCESS_KEY=xxxxx"
+```

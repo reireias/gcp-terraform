@@ -11,6 +11,18 @@ resource "google_cloudfunctions_function" "s3copy" {
   }
 
   source_repository {
-    url = "https://source.developers.google.com/projects/${data.google_client_config.current.project}/repos/github_reireias_aws-billing-copy-functions/moveable-aliases/master/paths/"
+    url = "https://source.developers.google.com/projects/${data.google_client_config.current.project}/repos/github_reireias_aws-billing-copy-functions/fixed-aliases/1.0.1/paths/"
+  }
+
+  environment_variables = {
+    AWS_ACCESS_KEY_ID     = "dummy"
+    AWS_SECRET_ACCESS_KEY = "dummy"
+  }
+
+  lifecycle {
+    ignore_changes = [
+      "environment_variables",
+      "labels"
+    ]
   }
 }
