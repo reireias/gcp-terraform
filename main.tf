@@ -1,3 +1,7 @@
+terraform {
+  required_version = "= 0.12.6"
+}
+
 provider "google" {
   project = "master-243612"
   region  = "asia-northeast1"
