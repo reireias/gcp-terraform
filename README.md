@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/reireias/gcp-terraform.svg?branch=master)](https://travis-ci.org/reireias/gcp-terraform)
 # Terraform for GCP
 
 ## initialize
