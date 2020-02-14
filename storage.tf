@@ -1,7 +1,7 @@
 variable "aws_access_key_id" {}
 variable "aws_secret_access_key" {}
 
-data "google_storage_transfer_project_service_account" "default" { }
+data "google_storage_transfer_project_service_account" "default" {}
 
 resource "google_storage_bucket" "aws_billing" {
   name = "reireias-aws-billing"
@@ -52,9 +52,9 @@ resource "google_storage_transfer_job" "s3-transfer-job" {
     }
 
     schedule_end_date {
-        year  = 2050
-        month = 1
-        day   = 1
+      year  = 2050
+      month = 1
+      day   = 1
     }
   }
 
