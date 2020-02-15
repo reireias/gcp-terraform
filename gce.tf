@@ -27,4 +27,6 @@ resource "google_compute_instance" "free" {
       "https://www.googleapis.com/auth/trace.append",
     ]
   }
+
+  tags = ["http-server", "https-server"]
 }
