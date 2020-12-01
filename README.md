@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/reireias/gcp-terraform.svg?branch=master)](https://travis-ci.org/reireias/gcp-terraform)
+[![Actions Status](https://github.com/reireias/gcp-terraform/workflows/fmt/badge.svg)](https://github.com/reireias/gcp-terraform/actions) [![Actions Status](https://github.com/reireias/gcp-terraform/workflows/tfsec/badge.svg)](https://github.com/reireias/gcp-terraform/actions)
 # Terraform for GCP
 
 ## initialize
